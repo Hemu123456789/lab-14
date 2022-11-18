@@ -1,13 +1,4 @@
-USE [msdb];
- 
-    
- SELECT 
-     j.[name] AS [Job Name], 
-     s.[step_name] AS [Step_Name],
-     s.[database_name] AS [Database Name],
-     s.[command] AS [SQL Script]
- FROM [dbo].[sysjobs] AS j
- INNER JOIN [dbo].[sysjobsteps] AS s ON j.[job_id] = s.[job_id]
- WHERE j.[enabled] = 1
- AND s.[subsystem] = 'TSQL'
- ORDER BY j.[name], s.[step_id];
+UPDATE `'students'`.`employee` SET `emp_name` = 'HIMANSHU', `emp_salary` = '100000' WHERE (`emp_id` = '1');
+UPDATE `'students'`.`employee` SET `emp_name` = 'DHEERAJ', `emp_salary` = '20000' WHERE (`emp_id` = '2');
+UPDATE `'students'`.`employee` SET `emp_name` = 'VIRAT', `emp_salary` = '30000' WHERE (`emp_id` = '3');
+UPDATE `'students'`.`employee` SET `emp_name` = 'SAMUEL', `emp_salary` = '40000' WHERE (`emp_id` = '4');
